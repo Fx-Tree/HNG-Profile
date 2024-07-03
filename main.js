@@ -16,10 +16,14 @@ const dayOfTheWeek = [
 
 currentDate.textContent = dayOfTheWeek[date.getDay()];
 
-const fullTime = date.toLocaleTimeString("en-US", {
-  hour: "2-digit",
-  minute: "2-digit",
-  second: "2-digit",
-});
+function refreshTime() {
+  let fullTime = new Date().toLocaleTimeString("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  });
+  currentTime.textContent = fullTime;
+}
 
-currentTime.textContent = fullTime;
+setInterval(refreshTime, 1000);
+
