@@ -1,0 +1,21 @@
+.form-control:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.myNav ul {
+  list-style: none;
+}
+
+.profile-picture {
+  border: transparent;
+  border-radius: 50px;
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
