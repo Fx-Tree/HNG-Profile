@@ -16,14 +16,23 @@ const dayOfTheWeek = [
 
 currentDate.textContent = dayOfTheWeek[date.getDay()];
 
+// function refreshTime() {
+//   let fullTime = new Date().toLocaleTimeString("en-US", {
+//     hour: "2-digit",
+//     minute: "2-digit",
+//     second: "2-digit",
+//   });
+//   currentTime.textContent = fullTime;
+// }
+
 function refreshTime() {
-  let fullTime = new Date().toLocaleTimeString("en-US", {
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
+  const dateString = new Date().toLocaleTimeString("en-US", {
+    timeZone: "America/Sao_Paulo",
   });
-  currentTime.textContent = fullTime;
+  currentTime.innerHTML = dateString;
 }
+
+setInterval(refreshTime, 1000);
 
 setInterval(refreshTime, 1000);
 
